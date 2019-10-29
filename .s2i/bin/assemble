@@ -1,4 +1,4 @@
-!# /bin/bash
+#!/bin/bash
 echo "--> installing application source"
 cp -Rf /tmp/src/*.html ./
 
