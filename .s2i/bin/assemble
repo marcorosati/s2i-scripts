@@ -1,4 +1,3 @@
-/usr/libexec/s2i/assemble
 echo "--> installing application source"
 cp -Rf /tmp/src/*.html ./
 
