@@ -9,11 +9,16 @@ echo "---> Enabling s2i support in httpd24 image"
 config_s2i
 
 ##CUSTOMIZATION
+echo "---> Installing application source"
+cp -Rf /tmp/src/*.html ./
+DATE=date"+%b %d, %Y @ %H:%M %p"
+
+echo "Page built on date $DATE" >> ./info.html
+echo "Http server version $HTTPD_VERSION" >> ./info.html
 
 ##CUSTOMIZATION
 
-echo "---> Installing application source"
-cp -af /tmp/src/. ./
+
 
 # Fix source directory permissions
 fix-permissions ./
